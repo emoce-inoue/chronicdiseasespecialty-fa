@@ -39,7 +39,7 @@
 
 .l-cta__button {
   --aspect-cta: 630/125;
-  --shadow-cta: drop-shadow(3.5px 3.5px 0 rgb(185 142 64 / 100%));
+  --shadow-cta: 3.5px 3.5px 0 rgb(185 142 64 / 100%);
 
   display: flex;
   justify-content: center;
@@ -50,7 +50,7 @@
   margin-inline: auto;
   background-color: var(--color-bluescale-400);
   border-radius: var(--rounded-sl);
-  filter: var(--shadow-cta);
+  box-shadow: var(--shadow-cta);
 }
 
 .l-cta__button-text {
@@ -118,17 +118,6 @@
   margin-inline: auto;
 }
 
-.l-hero__theme-main::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  inline-size: 100%;
-  block-size: 100%;
-  margin: auto;
-  background: url('../images/hero-logo-hover.webp') no-repeat center / 100% auto;
-  opacity: 0;
-}
-
 .l-slider {
   padding-block: calc(18 * var(--fluid-ratio-min)) calc(26 * var(--fluid-ratio-min));
   background-color: var(--color-bluescale-300);
@@ -161,10 +150,10 @@
 }
 
 .l-slider__logo {
-  --shadow-slide: drop-shadow(2px 2px 2px rgb(13 101 138 / 100%));
+  --shadow-slide: 2px 2px 2px rgb(13 101 138 / 100%);
 
   inline-size: calc(250 * var(--fluid-ratio-min));
-  filter: var(--shadow-slide);
+  box-shadow: var(--shadow-slide);
 }
 
 .l-slider--bottom .splide__track {
@@ -843,7 +832,7 @@
 
   .l-cta__button {
     --aspect-cta: 264/61;
-    --shadow-cta: drop-shadow(2px 2px 0 rgb(12 72 103 / 100%));
+    --shadow-cta: 2px 2px 0 rgb(12 72 103 / 100%);
 
     gap: calc(10 * var(--fluid-ratio-max));
     inline-size: 100%;
