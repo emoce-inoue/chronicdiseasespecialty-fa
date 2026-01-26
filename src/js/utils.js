@@ -11,6 +11,8 @@
 })();
 
 document.addEventListener('DOMContentLoaded', () => {
+  const isSP = window.matchMedia('(max-width: 768px)').matches;
+
   const observerCallback = (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -22,7 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
     threshold: 0.1,
   };
   const defaultObserver = new IntersectionObserver(observerCallback, defaultObserverOptions);
-  const targetElements = document.querySelectorAll('.js-fade, .js-fadeup, .js-fadein');
+  const targetElements = Array.from(document.querySelectorAll('.js-fade, .js-fadein'));
+  if (isSP) {
+    const spElements = document.querySelectorAll('.js-fadein-sp');
+    spElements.forEach((element) => targetElements.push(element));
+  }
   targetElements.forEach((target) => {
     defaultObserver.observe(target);
   });
