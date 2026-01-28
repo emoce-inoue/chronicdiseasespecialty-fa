@@ -23,6 +23,8 @@
   --layout-width-max: 1440;
   --fluid-ratio-min: calc(1 / var(--layout-width-min) * 100dvi);
   --fluid-ratio-max: calc(1 / var(--layout-width-max) * 100dvi);
+  --percent-ratio-min: calc(1/var(--layout-width-min) * 100%);
+  --percent-ratio-max: calc(1/var(--layout-width-max) * 100%);
   --aspect-video: 16/9;
   --aspect-thumbnail: 1.91/1;
   --rounded-xs: 2px;

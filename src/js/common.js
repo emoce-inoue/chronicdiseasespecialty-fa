@@ -37,7 +37,6 @@ const setExampleSlider = () => {
     perPage: 3,
     perMove: 1,
     focus: 'center',
-    clones: 3,
     updateOnMove: true,
     breakpoints: {
       767: {
