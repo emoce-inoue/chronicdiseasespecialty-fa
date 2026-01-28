@@ -1,6 +1,7 @@
 :root {
   /* font */
-  --font-sans: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', meiryo, sans-serif;
+  --font-hiragino: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic Medium', 'sans-serif';
+  --font-sans: 'Noto Sans JP', 'Noto Sans', sans-serif;
   --base-text-unit: 16;
   --rem-ratio: calc(1rem / var(--base-text-unit));
   --font-normal: 400;
@@ -18,23 +19,37 @@
   --tracking-relaxed: 0.12em;
 
   /* size */
-  --layout-width-min: 375;
+  --layout-width-min: 750;
   --layout-width-max: 1440;
   --fluid-ratio-min: calc(1 / var(--layout-width-min) * 100dvi);
   --fluid-ratio-max: calc(1 / var(--layout-width-max) * 100dvi);
+  --percent-ratio-min: calc(1/var(--layout-width-min) * 100%);
+  --percent-ratio-max: calc(1/var(--layout-width-max) * 100%);
   --aspect-video: 16/9;
   --aspect-thumbnail: 1.91/1;
   --rounded-xs: 2px;
   --rounded-s: 4px;
   --rounded-m: 8px;
   --rounded-sl: 10px;
-  --rounded-l: 30px;
+  --rounded-l: 15px;
+  --rounded-xl: 30px;
 
   /* color */
   --color-grayscale-0: #fff;
   --color-grayscale-1000: #000;
-  --background-base: var(--color-grayscale-0);
-  --font-base: var(--color-grayscale-100);
+  --color-bluescale-0: #d7f1ff;
+  --color-bluescale-100: #b9e5fe;
+  --color-bluescale-200: #7dd0fc;
+  --color-bluescale-300: #46aadd;
+  --color-bluescale-400: #1580b7;
+  --color-bluescale-500: #244267;
+  --color-yellowscale-0: #fffff6;
+  --color-yellowscale-100: #fff9de;
+  --color-yellowscale-200: #fde67c;
+  --color-yellowscale-300: #fdd955;
+  --background-base: var(--color-yellowscale-0);
+  --background-hero: linear-gradient(0deg, color-mix(in srgb, rgb(252 246 213 / 100%), transparent 16%) 0%, color-mix(in srgb, rgb(252 246 213 / 59%), transparent 16%) 61%, color-mix(in srgb, rgb(252 246 213 / 0%), transparent 16%) 100%);
+  --font-base: var(--color-bluescale-500);
   --underline-base: color-mix(in srgb, currentcolor, transparent 40%);
 
   /* z-index */
