@@ -520,7 +520,7 @@
 
 .l-example__list-text {
   margin-block-start: calc((20 / 686) * 100%);
-  font-weight: var(--font-normal);
+  font-weight: var(--font-medium);
   font-size: calc(32 * var(--fluid-ratio-min));
 }
 
@@ -1266,13 +1266,13 @@
     inline-size: min(calc(19 * var(--fluid-ratio-max)), 19px);
     aspect-ratio: 1;
     margin: 0;
-    background-color: var(--color-bluescale-100);
+    background-color: var(--color-yellowscale-200);
     opacity: 1;
   }
 
   .l-example__pagination .splide__pagination__page.is-active {
     transform: none;
-    background-color: var(--color-yellowscale-200);
+    background-color: var(--color-bluescale-100);
   }
 
   .l-example__pagination li {
@@ -1284,8 +1284,28 @@
   .l-example__cursor {
     position: absolute;
     inset-block-end: 0;
-    inset-inline-start: min(calc(50% + 350px), calc(935 * var(--percent-ratio-max)));
     inline-size: min(calc(50 * var(--percent-ratio-max)), 50px);
+    pointer-events: none;
+  }
+
+  .l-example__cursor--default {
+    inset-inline-start: min(calc(50% + 350px), calc(935 * var(--percent-ratio-max)));
+  }
+
+  .l-example__cursor--hover {
+    inset-inline-start: min(calc(50% + 95px), calc(813 * var(--percent-ratio-max)));
+    margin-block-end: min(0.5%, 8px);
+  }
+
+  .l-example__cursor-image--default {
+    animation: cursor-switch 6s ease-in-out infinite;
+  }
+
+  .l-example__cursor-image--hover {
+    opacity: 0;
+    visibility: hidden;
+    scale: 0.75;
+    animation: button-switch 6s ease-in-out infinite;
   }
 
   .l-service {

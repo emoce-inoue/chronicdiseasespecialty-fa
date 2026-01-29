@@ -35,23 +35,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const anchorLink = document.querySelector('.js-anchor-link');
   if (anchorLink) {
-    const anchorLinkHeight = anchorLink.offsetHeight;
     const links = document.querySelectorAll('.js-scroll-link');
+
     links.forEach((link) => {
       link.addEventListener('click', (event) => {
         event.preventDefault();
+
         const targetId = link.getAttribute('href').substring(1);
         if (targetId === '') {
-          window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-          });
+          window.scrollTo({ top: 0, behavior: 'smooth' });
           return;
         }
+
         const targetElement = document.getElementById(targetId);
-        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - anchorLinkHeight;
+        if (!targetElement) {
+          return;
+        }
+
+        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+
+        let offset = 0;
+        if (!isSP) {
+          offset = anchorLink.offsetHeight;
+        }
+
         window.scrollTo({
-          top: targetPosition,
+          top: targetPosition - offset,
           behavior: 'smooth',
         });
       });
