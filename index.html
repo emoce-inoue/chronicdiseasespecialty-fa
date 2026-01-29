@@ -25,7 +25,7 @@
     <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet" />
   <link href="style.css" rel="stylesheet"></head>
   <body>
-    <header class="l-header">
+    <header class="l-header js-anchor-link">
       <a href="./" class="l-header__logo"><img src="images/header-logo.svg" alt="持病専門保険ナビ" width="357" height="56" /></a>
     </header>
 
@@ -316,7 +316,12 @@
             </div>
           </div>
           <p class="l-example__attention js-fadein">※健康状態や年齢により、 ご案内できる内容は異なります。</p>
-          <div class="l-example__cursor no-sp"><img src="images/guide-button-default-cursor.svg" alt="カーソルのアイコン" width="50" height="65" /></div>
+          <div class="l-example__cursor l-example__cursor--default no-sp js-fadein">
+            <div class="l-example__cursor-image l-example__cursor-image--default"><img src="images/guide-button-default-cursor.svg" alt="カーソルのアイコン" width="50" height="65" /></div>
+          </div>
+          <div class="l-example__cursor l-example__cursor--hover no-sp js-fadein">
+            <div class="l-example__cursor-image l-example__cursor-image--hover"><img src="images/guide-button-default-cursor.svg" alt="カーソルのアイコン" width="50" height="65" /></div>
+          </div>
         </div>
       </section>
 
@@ -355,7 +360,7 @@
         </div>
       </section>
 
-      <section id="form" class="l-form js-anchor-link js-hide-trigger">
+      <section id="form" class="l-form js-hide-trigger">
         <div class="l-section__headline js-fadein">
           <div class="l-section__headline-icon"><img src="images/problem-icon.svg" alt="カプセルアイコン" width="94" height="43" /></div>
           <h2 class="l-section__headline-text">資料請求はこちら</h2>
